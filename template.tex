@@ -1,0 +1,112 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath, enumitem, fancyhdr, fontspec, geometry, lastpage, titlesec}
+\usepackage[fontset = founder]{ctex}
+
+% 页边距
+\geometry{
+    left=2cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm
+}
+
+% section格式
+\renewcommand{\thesection}{\chinese{section}}
+\titleformat{\section}{\normalsize \bf \sffamily}{\thesection、}{0pt}{}
+
+% 自定义命令
+\def\mycenter#1{\begin{center} \bf \sffamily \large #1 \end{center}}
+
+% 页码
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{数学试卷\ 第\thepage 页\ 共\pageref{LastPage}\ 页}
+\renewcommand{\headrulewidth}{0pt}
+
+% 题目格式
+\newlist{question}{enumerate}{2}
+\setlist[question,1]{
+    label=\arabic*.
+}
+\setlist[question, 2]{
+    topsep=0pt,
+    label=\protect{\makebox[2.5em]{（\hfill\Roman*\hfill）}},
+    labelsep=0pt
+}
+
+\begin{document}
+
+\setmainfont{Times New Roman}
+
+\begin{center}
+    \large 某某学校2024-2025学年第二学期期中练习 \\
+    \begin{tabular}{@{}p{0.4\textwidth} c p{0.4\textwidth}@{}}
+        & \Large \bf \sffamily 数学试卷 & \hfill \small 2025.04
+    \end{tabular}
+\end{center}
+
+本试卷共\pageref{LastPage}\ 页，150分。考试时长120分钟。考生务必将答案答在答题纸上，在试卷上作答无效。考试结束后，将本试卷和答题纸一并交回。
+
+\mycenter{第一部分（选择题\ 共\textmd{\rmfamily 40}分）}
+
+\section{选择题：本题共\textmd{\rmfamily 10}小题，每小题\textmd{\rmfamily 4}分，共\textmd{\rmfamily 40}分。在每小题给出的四个选项中，只有一项是符合题目要求的。}
+\begin{question}[resume]
+    \item 选择题 \\
+    \noindent
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllll@{}}
+        A. 1 &
+        B. 2 &
+        C. 3 &
+        D. 4 &
+    \end{tabular*}
+
+    \item 选择题 \\
+    \noindent
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+        A. 1 &
+        B. 2 & \\
+        C. 3 &
+        D. 4 &
+    \end{tabular*}
+
+    \item 选择题 \\
+    \noindent
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ll@{}}
+        A. 1 & \\
+        B. 2 & \\
+        C. 3 & \\
+        D. 4 &
+    \end{tabular*}
+\end{question}
+
+\mycenter{第二部分（非选择题\ 共\textmd{\rmfamily 110}分）}
+
+\section{填空题：本题共\textmd{\textrm{5}}小题，每小题\textmd{\textrm{5}}分，共\textmd{\textrm{25}}分。}
+\begin{question}[resume]
+    \item 填空题\underline{\hspace{3em}}.
+    \item 填空题.
+    \begin{question}
+        \item 第一问\underline{\hspace{3em}}；
+        \item 第二问\underline{\hspace{3em}}.
+    \end{question}
+\end{question}
+
+\section{解答题：本题共\textmd{\textrm{6}}小题，共\textmd{\textrm{85}}分。解答题应写出文字说明、证明过程或演算步骤。}
+\begin{question}[resume]
+    \item （本小题15分） \\
+    解答题
+    \begin{question}
+        \item 第一问；
+        \item 第二问.
+    \end{question}
+    \item （本小题15分） \\
+    解答题
+    \begin{question}
+        \item 第一问；
+        \item 第二问；
+        \item 第三问.
+    \end{question}
+\end{question}
+
+\end{document}
+

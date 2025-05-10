@@ -23,15 +23,31 @@
 \cfoot{数学试卷\ 第\thepage 页\ 共\pageref{LastPage}\ 页}
 \renewcommand{\headrulewidth}{0pt}
 
-% 题目格式
+% 题目格式. III太宽了，稍作调整
 \newlist{question}{enumerate}{2}
+
+% 北京、天津等地，(1), (2), ...
+% \setlist[question,1]{
+%     label=\protect{\makebox[1.6em]{(\hfill\arabic*\hfill)}},
+%     labelwidth=1.6em,
+%     labelsep=0.4em,
+%     leftmargin=2em,
+% }
+
+% 常见格式，1., 2., ...
 \setlist[question,1]{
-    label=\arabic*.
+    label=\protect{\makebox[1.6em]{\hfill\arabic*.\hfill}},
+    labelwidth=1.6em,
+    labelsep=0.4em,
+    leftmargin=2em,
 }
+
 \setlist[question, 2]{
     topsep=0pt,
-    label=\protect{\makebox[2.5em]{（\hfill\Roman*\hfill）}},
-    labelsep=0pt
+    label=\protect{\makebox[1.6em]{(\hfill\Roman*\hfill)}},
+    labelwidth=1.6em,
+    labelsep=0.4em,
+    leftmargin=2em,
 }
 
 \begin{document}
@@ -39,9 +55,9 @@
 \setmainfont{Times New Roman}
 
 \begin{center}
-    \large 某某学校2024-2025学年第二学期期中练习 \\
+    \large 某某学校xxxx-xxxx学年xx考试 \\
     \begin{tabular}{@{}p{0.4\textwidth} c p{0.4\textwidth}@{}}
-        & \Large \bf \sffamily 数学试卷 & \hfill \small 2025.04
+        & \Large \bf \sffamily 数学试卷 & \hfill \small xxxx.xx
     \end{tabular}
 \end{center}
 
@@ -51,8 +67,8 @@
 
 \section{选择题：本题共\textmd{\rmfamily 10}小题，每小题\textmd{\rmfamily 4}分，共\textmd{\rmfamily 40}分。在每小题给出的四个选项中，只有一项是符合题目要求的。}
 \begin{question}[resume]
+    % 1
     \item 选择题 \\
-    \noindent
     \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllll@{}}
         A. 1 &
         B. 2 &
@@ -60,8 +76,35 @@
         D. 4 &
     \end{tabular*}
 
+    % 2
     \item 选择题 \\
-    \noindent
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllll@{}}
+        A. 1 &
+        B. 2 &
+        C. 3 &
+        D. 4 &
+    \end{tabular*}
+
+    % 3
+    \item 选择题 \\
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllll@{}}
+        A. 1 &
+        B. 2 &
+        C. 3 &
+        D. 4 &
+    \end{tabular*}
+
+    % 4
+    \item 选择题 \\
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllll@{}}
+        A. 1 &
+        B. 2 &
+        C. 3 &
+        D. 4 &
+    \end{tabular*}
+
+    % 5
+    \item 选择题 \\
     \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
         A. 1 &
         B. 2 & \\
@@ -69,8 +112,44 @@
         D. 4 &
     \end{tabular*}
 
+    % 6
     \item 选择题 \\
-    \noindent
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+        A. 1 &
+        B. 2 & \\
+        C. 3 &
+        D. 4 &
+    \end{tabular*}
+
+    % 7
+    \item 选择题 \\
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+        A. 1 &
+        B. 2 & \\
+        C. 3 &
+        D. 4 &
+    \end{tabular*}
+
+    % 8
+    \item 选择题 \\
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+        A. 1 &
+        B. 2 & \\
+        C. 3 &
+        D. 4 &
+    \end{tabular*}
+
+    % 9
+    \item 选择题 \\
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ll@{}}
+        A. 1 & \\
+        B. 2 & \\
+        C. 3 & \\
+        D. 4 &
+    \end{tabular*}
+
+    % 10
+    \item 选择题 \\
     \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ll@{}}
         A. 1 & \\
         B. 2 & \\
@@ -83,22 +162,72 @@
 
 \section{填空题：本题共\textmd{\textrm{5}}小题，每小题\textmd{\textrm{5}}分，共\textmd{\textrm{25}}分。}
 \begin{question}[resume]
+    % 11
     \item 填空题\underline{\hspace{3em}}.
+    
+    % 12
+    \item 填空题\underline{\hspace{3em}}.
+    
+    % 13
     \item 填空题.
     \begin{question}
         \item 第一问\underline{\hspace{3em}}；
         \item 第二问\underline{\hspace{3em}}.
     \end{question}
+    
+    % 14
+    \item 填空题\underline{\hspace{3em}}.
+    
+    % 15
+    \item 填空题\underline{\hspace{3em}}.
 \end{question}
 
 \section{解答题：本题共\textmd{\textrm{6}}小题，共\textmd{\textrm{85}}分。解答题应写出文字说明、证明过程或演算步骤。}
 \begin{question}[resume]
-    \item （本小题15分） \\
+    % 16
+    \item （本小题13分） \\
     解答题
     \begin{question}
         \item 第一问；
         \item 第二问.
     \end{question}
+    
+    % 17
+    \item （本小题13分） \\
+    解答题
+    \begin{question}
+        \item 第一问；
+        \item 第二问.
+        \item 第三问.
+    \end{question}
+    
+    % 18
+    \item （本小题14分） \\
+    解答题
+    \begin{question}
+        \item 第一问；
+        \item 第二问；
+        \item 第三问.
+    \end{question}
+    
+    % 19
+    \item （本小题15分） \\
+    解答题
+    \begin{question}
+        \item 第一问；
+        \item 第二问；
+    \end{question}
+    
+    % 20
+    \item （本小题15分） \\
+    解答题
+    \begin{question}
+        \item 第一问；
+        \item 第二问；
+        \item 第三问.
+    \end{question}
+    
+    % 21
     \item （本小题15分） \\
     解答题
     \begin{question}

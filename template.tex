@@ -1,6 +1,8 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{amsmath, enumitem, fancyhdr, fontspec, geometry, lastpage, titlesec}
-\usepackage[fontset = founder]{ctex}
+\usepackage{amsmath, enumitem, fancyhdr, geometry, fontspec, lastpage, titlesec}
+\usepackage{xeCJK}
+\usepackage{CJKnumb}
+
 
 % 页边距
 \geometry{
@@ -9,10 +11,11 @@
     top=2cm,
     bottom=2cm
 }
-
+% 字体
+\setmainfont{Times New Roman}
+\setCJKmainfont{"FZShuSong_GB18030-Z01"}
 % section格式
-\renewcommand{\thesection}{\chinese{section}}
-\titleformat{\section}{\normalsize \bf \sffamily}{\thesection、}{0pt}{}
+\renewcommand{\thesection}{\CJKnumber{\value{section}}、}
 
 % 自定义命令
 \def\mycenter#1{\begin{center} \bf \sffamily \large #1 \end{center}}
@@ -50,9 +53,10 @@
     leftmargin=2em,
 }
 
+
 \begin{document}
 
-\setmainfont{Times New Roman}
+
 
 \begin{center}
     \large 某某学校xxxx-xxxx学年xx考试 \\

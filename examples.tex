@@ -62,7 +62,7 @@
 
 \begin{center}
     % \huge 某某学校xxxx-xxxx学年xx考试 \\
-    \huge 长安教育暑假班中期考试 \\
+    \huge 暑假班中期考试 \\
     \Large \bf \sffamily 数学试卷-平面向量部分
 \end{center}
 
@@ -83,19 +83,20 @@
 \item 已知 $\bm{a} = (4,\,2)$，与 $\bm{a}$ 垂直的单位向量的坐标为\underline{\hspace{6em}}。
 \item 已知 $A(2,3)$、$B(4,-3)$，点 $P$ 在线段 $AB$ 的延长线上，且
 $| \overrightarrow{AP}|=\dfrac{3}{2}\,| \overrightarrow{PB}|$，点 $P$ 的坐标为\underline{\hspace{6em}}。
+\item 已知向量 $\bm{a}=(1,\,0)$、$\bm{b}=(1,\,1)$、$\bm{c}=(-1,\,0)$，$\bm{c}=\lambda\,\bm{a}+\mu\,\bm{b}$, 则 $\lambda=$ \underline{\hspace{6em}}， $\mu=$ \underline{\hspace{6em}}.
+\item 若 $\bm{e}_{1}$、$\bm{e}_{2}$ 是夹角为 $60^\circ$ 的两个单位向量，则
+$
+\bm{a}=2\bm{e}_{1}+\bm{e}_{2}, \quad
+\bm{b}=-3\bm{e}_{1}+2\bm{e}_{2}
+$
+的夹角为\underline{\hphantom{3cm}}。
 
 
 \end{question}
-\section{计算题：本题共\textmd{\rmfamily 80}分。}
-\begin{question}[resume]
-    % 1
-    \item 选择题 \\
-    
 
-    % 2
-    \item 选择题 \\
-    
-\end{question}
+
+
+
 
 % \mycenter{第二部分（非选择题\ 共\textmd{\rmfamily 110}分）}
 
@@ -166,21 +167,83 @@ $| \overrightarrow{AP}|=\dfrac{3}{2}\,| \overrightarrow{PB}|$，点 $P$ 的坐�
     \end{tikzpicture}
 
     
-    % 14
+    \item 用向量法证明：直径所对的圆周角是直角.\vspace{15em}
     \item 用向量方法证明两角差的余弦公式
     \[
     \cos(\alpha - \beta) = \cos\alpha \cos\beta + \sin\alpha \sin\beta.
-    \]
+    \]\vspace{15em}
 
     
     % 15
     \item 用向量方法证明：对于任意的 $a,b,c,d\in\bm{R}$，恒有不等式
     \[
     (ac+bd)^2 \leq (a^2+b^2)\,(c^2+d^2).
-    \]
+    \]\vspace{15em}
+    \item 
+    \begin{question}
+        \item 用向量法证明余弦定理: $c^2=a^2+b^2-2ab\cos C$.
+        \item 用向量法证明正弦定理: $$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}.$$
+        \item 根据正弦定理证明：$$S_{\triangle ABC}=\frac{1}{2}ab\sin C.$$
+        \item 证明：设三角形的外接圆半径为 $R$，则
+        \[
+        \frac{a}{\sin A}=2R.
+        \]
+        \item 在 $\triangle ABC$ 中，求证：\quad
+        \( c\bigl(a\cos B - b\cos A\bigr)=a^{2}-b^{2}. \)
 
+    \end{question}\vspace{30em}
+
+    \item 在 $\triangle ABC$ 中，$BE$ 和 $CF$ 分别是两条中线，交于点 $O$；
+    $D$ 为边 $BC$ 的中点。证明：$A$、$O$、$D$ 三点共线，且 $ AO = 2\,OD.$
+
+    \begin{tikzpicture}[scale=1.2, line cap=round, line join=round]
+    % 顶点
+    \coordinate (A) at (1.2,3.0);
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (4.2,0);
+
+    % 边
+    \draw[very thick] (A)--(B)--(C)--cycle;
+
+    % 选点
+    \coordinate (D) at ($(B)!0.5!(C)$);      % BC 上一点 D
+    \coordinate (E) at ($(A)!0.5!(C)$);      % AC 上一点 E
+    \coordinate (F) at ($(A)!0.5!(B)$);      % AB 上一点 F
+
+    % 线段/箭线
+    \draw[very thick, magenta] (B)--(E);
+    \draw[very thick, magenta] (C)--(F);
+    \draw[dashed, ultra thick, cyan!60] (A)--(D);
+
+    % 交点 O
+    \coordinate (O) at (intersection of B--E and C--F);
+    \fill (O) circle(1pt);
+
+    % 标注
+    \node[above]      at (A) {A};
+    \node[below left] at (B) {B};
+    \node[below right]at (C) {C};
+    \node[below]      at (D) {D};
+    \node[right]      at (E) {E};
+    \node[left]       at (F) {F};
+    \node[right]      at (O) {O};
+
+    % 图注（放在图的正下方中间）
+    \node[below=6pt] at (current bounding box.south) {\small(第**题)};
+    \end{tikzpicture}
+    \vspace{10em}
 
 \end{question}
 
 
+\section{计算题：本题共\textmd{\rmfamily 80}分。}
+\begin{question}[resume]
+    % 1
+    \item 选择题 \\
+    
+
+    % 2
+    \item 选择题 \\
+    
+\end{question}
 \end{document}
